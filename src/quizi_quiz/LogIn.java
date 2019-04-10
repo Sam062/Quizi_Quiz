@@ -68,7 +68,6 @@ public class LogIn extends javax.swing.JFrame {
         jTextField2.setFont(new java.awt.Font("Yu Gothic UI", 0, 16)); // NOI18N
 
         jPasswordField1.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
-        jPasswordField1.setText("jPasswordField1");
         jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jPasswordField1ActionPerformed(evt);
@@ -113,7 +112,6 @@ public class LogIn extends javax.swing.JFrame {
         });
 
         jPasswordField2.setFont(new java.awt.Font("Yu Gothic UI", 0, 8)); // NOI18N
-        jPasswordField2.setText("jPasswordField1");
         jPasswordField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jPasswordField2ActionPerformed(evt);
@@ -313,18 +311,19 @@ public class LogIn extends javax.swing.JFrame {
         
             if(rs1.next()){          
                 // System.out.println("Admin Page ");
-                int studentid=rs1.getInt("id");
+                 int studentid=rs1.getInt("id");
                  String stringID=Integer.toString(studentid);
                  System.out.println(stringID);
                  
                  if(adminname.isEmpty()){
                      System.out.println("INPUT SOMETHING");
                  }
-                 else{
+                 else
+                 {
                  System.out.println("ADMIN LOGIN ");
-                AdminLogin al=new AdminLogin();
-                al.setVisible(true);
-                this.setVisible(false);
+                 AdminLogin al=new AdminLogin();
+                 al.setVisible(true);
+                 this.setVisible(false);
                  }
                                               
             }
