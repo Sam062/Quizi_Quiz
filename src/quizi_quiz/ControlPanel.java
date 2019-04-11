@@ -174,7 +174,7 @@ String ID;
         }
         if(subject !=null)
         {
-            ExamPanel ep=new ExamPanel(subject,ID);
+            ExamPanel ep=new ExamPanel();
             ep.setVisible(true);
             this.setVisible(false);            
         }
