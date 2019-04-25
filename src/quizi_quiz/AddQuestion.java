@@ -69,7 +69,7 @@ static String subject="Blank";
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setFont(new java.awt.Font("Yu Gothic UI", 1, 18)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         jButton1.setText("Add Question");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -208,7 +208,7 @@ static String subject="Blank";
         jLabel1.setFont(new java.awt.Font("Yu Gothic UI", 1, 30)); // NOI18N
         jLabel1.setText("         ADD QUESTION");
 
-        jButton3.setFont(new java.awt.Font("Yu Gothic UI", 1, 18)); // NOI18N
+        jButton3.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         jButton3.setText("Reset");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -318,7 +318,7 @@ static String subject="Blank";
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton3))
-                .addContainerGap(116, Short.MAX_VALUE))
+                .addContainerGap(118, Short.MAX_VALUE))
         );
 
         pack();
@@ -364,6 +364,7 @@ static String subject="Blank";
             Connection con= (Connection) DriverManager.getConnection(database, "root", "");
             Statement stat=(Statement)con.createStatement();
            
+            //here The question added in the DB is having a space as the first char so have to modify later
                 String query1="insert into "+subject+" values(null,' "+question+" ',' "+optionA+" ',' "+optionB+" ',' "+optionC+" ',' "+optionD+" ',' "+correctAns+" ') ";  
                // System.out.println(query1);
                  int x=stat.executeUpdate(query1);

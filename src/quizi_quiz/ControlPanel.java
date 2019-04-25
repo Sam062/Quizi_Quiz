@@ -162,6 +162,9 @@ String ID;
         String subject=null;
         if(jRadioButton1.isSelected()){
             subject="JAVA";
+            ExamQuestion eq=new ExamQuestion();
+            eq.setVisible(true);
+            this.setVisible(false);
         }
         else if(jRadioButton2.isSelected()){
             subject="C / C++";
@@ -171,12 +174,6 @@ String ID;
         }
         else if(jRadioButton4.isSelected()){
             subject="PYTHON";
-        }
-        if(subject !=null)
-        {
-            ExamPanel ep=new ExamPanel();
-            ep.setVisible(true);
-            this.setVisible(false);            
         }
         else
             System.out.println("SELECT A SUBJECT");

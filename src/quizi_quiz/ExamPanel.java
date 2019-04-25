@@ -97,15 +97,7 @@ public class ExamPanel extends javax.swing.JFrame {
             new String [] {
                 "ID", "Question", "OptionA", "OptionB", "OptionC", "OptionD", "Answer"
             }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
+        ));
         jScrollPane1.setViewportView(jTable_Display_User);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

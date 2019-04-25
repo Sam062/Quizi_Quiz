@@ -21,6 +21,7 @@ class User {
         this.OptionC=OptionC;
         this.OptionD=OptionD;
         this.Answer=Answer;
+
     }
     
     public int getID(){
@@ -44,6 +45,7 @@ class User {
     public String getAnswer(){
         return Answer;
     }
+ 
 
     Object getString(String question) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
